@@ -1,4 +1,6 @@
-# Ignore all files and directories except wp-content/plugins and wp-content/themes
-*
-!wp-content/plugins/
-!wp-content/themes/
+# Ignore everything except wp-content/plugins and wp-content/themes
+/*
+!/wp-content/
+/wp-content/*
+!/wp-content/plugins/
+!/wp-content/themes/
