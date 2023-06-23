@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
@@ -649,7 +649,6 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
 	display: block;
-	width: 100%;
 }
 
 .main-navigation ul {
@@ -1034,9 +1033,12 @@ a {
 /* Header Styles */
 
 .site-header {
-	background-color: #333;
+	background-color: #33333321;
 	padding: 20px;
 	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .site-title {
@@ -1096,4 +1098,38 @@ a {
 .site-footer a {
 	color: #fff;
 }
-
+.nav-menu li {
+	margin-right: 20px;
+}
+.site-main {
+	padding: 0 25px;
+}
+.project-archive {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+.projects {
+	border: 1px solid #eee;
+	padding: 25px;
+	margin-bottom: 25px;
+	max-width: 300px;
+}
+.pagination {
+	padding: 25px;
+	text-align: center;
+}
+ul.quotes {
+	padding: 0;
+	padding-top: 25px;
+	list-style: decimal;
+}
+.quotes li {
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	padding: 7px 14px;
+	border-radius: 7px;
+}
+.coffee-link {
+	padding: 25px;
+	font-size: 24px;
+}

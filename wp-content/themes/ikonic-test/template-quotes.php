@@ -14,7 +14,7 @@ get_header();
         $quotes = get_kanye_quotes(5);
 
         if (!empty($quotes)) {
-            echo '<ul>';
+            echo '<ul class="quotes">';
             foreach ($quotes as $quote) {
                 echo '<li>' . esc_html($quote) . '</li>';
             }

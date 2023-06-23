@@ -260,8 +260,6 @@ add_action('init', 'register_project_type_taxonomy');
 
 // Enqueue the custom API script
 function enqueue_custom_scripts() {
-	// Enqueue the wp-api.js script
-	wp_enqueue_script('wp-api');
 
 	// Localize the script to pass data to JavaScript
 	wp_localize_script('wp-api', 'customApiSettings', array(
@@ -276,7 +274,7 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 // Register the API endpoint
 function register_projects_api_endpoint() {
-	register_rest_route('mytheme/v1', '/projects', array(
+	register_rest_route('ikonic/v1', '/projects', array(
 			'methods'             => 'GET',
 			'callback'            => 'get_projects_api_data',
 			'permission_callback' => function () {
@@ -303,7 +301,6 @@ $cookies = $_COOKIE;
 foreach ($cookies as $name => $value) {
     if (strpos($name, 'wordpress_logged_in_') === 0) {
         $cookie_name = $name;
-				$response['cookies'] = $name;
         break;
     }
 }
